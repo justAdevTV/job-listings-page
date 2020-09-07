@@ -14,16 +14,28 @@ const _InfoContainer = styled.div`
   margin-left: 2.4rem;
 
   & > h2 {
+    position: relative;
     margin-top: 1px;
     font-size: 0.95em;
     line-height: 1.6em;
     font-weight: 500;
     color: ${({ theme }) => theme.colors.primary};
+
+    & > span {
+      position: absolute;
+      top: -1px;
+      display: inline-block;
+      margin-left: 1.6rem;
+
+      & > div:first-child {
+        margin-right: 2px;
+      }
+    }
   }
 
   & > h3 {
     margin-left: 1px;
-    margin-top: 0.9rem;
+    margin-top: 0.85rem;
     letter-spacing: 0.2px;
   }
 

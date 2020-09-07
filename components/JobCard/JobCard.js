@@ -33,7 +33,17 @@ function JobCard({
       <_JobCardContainer>
         <_Logo src={logo} alt={`logo for ${company}`} />
         <_InfoContainer>
-          <h2>{company}</h2>
+          <h2>
+            {company}
+            <span>
+              {isNew && <Tag round>NEW!</Tag>}{" "}
+              {featured && (
+                <Tag dark round>
+                  FEATURED
+                </Tag>
+              )}
+            </span>
+          </h2>
           <h3>{position}</h3>
           <h4>
             {postedAt}

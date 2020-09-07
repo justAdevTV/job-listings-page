@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./base/GlobalStyle";
+import GlobalStyle from "./_base/GlobalStyle";
 import Head from "next/head";
 import PropTypes from "prop-types";
 
@@ -11,7 +11,13 @@ function AppProvider({ children, theme }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        {/* TODO: Add fonts and favicon */}
+        {/* Font - Spartan Import */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap"
+          rel="stylesheet"
+        />
+        {/* Favicon Import */}
+        <link rel="shortcut icon" type="image/png" href="/favicon-32x32.png" />
 
         <title>Job Listings</title>
       </Head>

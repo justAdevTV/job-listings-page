@@ -5,14 +5,26 @@ import { JobCard } from "../";
 function JobsList({ jobs, onClick }) {
   // Takes jobs prop and maps out to JobCards
   const generateJobsListCards = (jobs) =>
-    jobs.map((jobProps) => (
-      <JobCard
-        {...jobProps}
-        key={jobProps.id}
-        isNew={jobProps.new}
-        onClick={onClick}
-      />
-    ));
+    jobs.map((jobProps) => {
+      // Build array for tags that are searchable
+      // In this order [role, level, languages, tools]
+      let filterableTags = [];
+      filterableTags.push(jobProps.role);
+      filterableTags.push(jobProps.level);
+      filterableTags = filterableTags.concat(jobProps.languages);
+      filterableTags = filterableTags.concat(jobProps.tools);
+      // Remove empty entries
+      filterableTags = filterableTags.filter((value) => value.length > 0);
+      return (
+        <JobCard
+          {...jobProps}
+          filterableTags={filterableTags}
+          key={jobProps.id}
+          isNew={jobProps.new}
+          onClick={onClick}
+        />
+      );
+    });
 
   return <_JobsList>{generateJobsListCards(jobs)}</_JobsList>;
 }
@@ -52,7 +64,7 @@ JobsList.propTypes = {
       /**
        * ["Frontend", "Backend", "Fullstack"]
        */
-      role: PropTypes.oneOf(["Frontend", "Backend", "Fullstack"]).isRequired,
+      role: PropTypes.string.isRequired,
       /**
        * ["Contract", "Full Time", "Part Time"]
        */

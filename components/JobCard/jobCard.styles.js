@@ -27,6 +27,7 @@ const _InfoContainer = styled.div`
       display: inline-block;
       margin-left: 1.6rem;
 
+      /* Round tags */
       & > div:first-child {
         margin-right: 2px;
       }
@@ -53,6 +54,14 @@ const _Spacer = styled.span`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-const _Tags = styled.div``;
+const _Tags = styled.div`
+  margin: auto 0;
+  margin-left: auto;
+
+  /* Round tags */
+  & > div:not(:last-child) {
+    margin-right: 1.85rem;
+  }
+`;
 
 export { _JobCardContainer, _Logo, _InfoContainer, _Spacer, _Tags };

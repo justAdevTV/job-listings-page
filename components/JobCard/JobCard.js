@@ -15,23 +15,25 @@ function JobCard({
   isNew,
   featured,
   position,
-  role,
-  level,
   postedAt,
   contract,
   location,
-  languages,
-  tools,
+  filterableTags,
+  onClick,
 }) {
-  // TODO: Write logic for generate tags
-  const generateTags = () => {
-    return [];
-  };
+  const generateTags = (filterableTags) =>
+    filterableTags.map((tagName) => (
+      <Tag key={tagName} onClick={onClick}>
+        {tagName}
+      </Tag>
+    ));
 
   return (
     <Card>
       <_JobCardContainer>
+        {/* First Section */}
         <_Logo src={logo} alt={`logo for ${company}`} />
+        {/* Middle Section */}
         <_InfoContainer>
           <h2>
             {company}
@@ -53,7 +55,8 @@ function JobCard({
             {location}
           </h4>
         </_InfoContainer>
-        <_Tags>{generateTags()}</_Tags>
+        {/* Last Section */}
+        <_Tags>{generateTags(filterableTags)}</_Tags>
       </_JobCardContainer>
     </Card>
   );
@@ -61,6 +64,7 @@ function JobCard({
 
 JobCard.defaultProps = {
   onClick: () => {},
+  filterableTags: [],
 };
 
 JobCard.propTypes = {
@@ -85,14 +89,6 @@ JobCard.propTypes = {
    */
   position: PropTypes.string.isRequired,
   /**
-   * ["Frontend", "Backend", "Fullstack"]
-   */
-  role: PropTypes.oneOf(["Frontend", "Backend", "Fullstack"]).isRequired,
-  /**
-   * ["Contract", "Full Time", "Part Time"]
-   */
-  level: PropTypes.oneOf(["Senior", "Midweight", "Junior"]).isRequired,
-  /**
    * Time since posting ex. 2d ago
    */
   postedAt: PropTypes.string.isRequired,
@@ -105,13 +101,9 @@ JobCard.propTypes = {
    */
   location: PropTypes.string.isRequired,
   /**
-   * Ex. Ruby, JS
+   * List of tags that can be used to filter results
    */
-  languages: PropTypes.array.isRequired,
-  /**
-   * Ex. React
-   */
-  tools: PropTypes.array.isRequired,
+  filterableTags: PropTypes.array.isRequired,
   /**
    * Uplifts ({tagName})
    */

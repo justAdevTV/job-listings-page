@@ -17,10 +17,10 @@ const _Tag = styled.div`
   border-radius: ${({ round }) => (round ? "1.2rem" : "4px")};
   color: ${({ round, theme }) =>
     round ? theme.colors.white : theme.colors.primary};
-  font-size: 0.7em;
+  font-size: ${({ round }) => (round ? "0.7em" : ".82em")};
   font-weight: 700;
-  padding: 0 1rem;
-  padding-top: 2px;
+  padding: ${({ round }) => (round ? "0 1rem" : ".7rem")};
+  padding-top: ${({ round }) => (round ? "2px" : ".8rem")};
   letter-spacing: 0.45px;
   background-color: ${({ round, theme, dark }) =>
     findBackgroundColor(round, theme.colors, dark)};

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { _FilterContainer } from "./filter.styles";
+import { _Clear, _FilterContainer, _Tags } from "./filter.styles";
 import { Card, FilterTag } from "../";
 
 // TODO: Fill this in
@@ -7,6 +7,8 @@ function Filter({ filters, onChange }) {
   const handleOnRemoveFilterClick = ({ tagName }) => {
     console.log("Remove Filter", tagName);
   };
+
+  const handleClearAllClick = () => onChange({ fitlers: [] });
 
   const generateTags = (filters) =>
     filters.map((filter) => (
@@ -20,7 +22,15 @@ function Filter({ filters, onChange }) {
 
   return (
     <Card>
-      <_FilterContainer>{generateTags(filters)}</_FilterContainer>
+      <_FilterContainer>
+        <_Tags>{generateTags(filters)}</_Tags>
+        <_Clear
+          ariaLabel="Clear All Filters"
+          onClick={() => handleClearAllClick}
+        >
+          Clear
+        </_Clear>
+      </_FilterContainer>
     </Card>
   );
 }
@@ -32,6 +42,9 @@ Filter.defaultProps = {
 
 Filter.propTypes = {
   filters: PropTypes.arrayOf(PropTypes.string),
+  /**
+   * Uplifts: {filters: ['']}
+   */
   onChange: PropTypes.func,
 };
 

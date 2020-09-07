@@ -166,7 +166,7 @@ function Home() {
   return (
     <JobsPageTemplate
       bannerComponent={<Banner />}
-      filterComponent={<Filter filters={["Frontend", "CSS"]} />}
+      filterComponent={<Filter filters={["Frontend", "CSS", "JavaScript"]} />}
       jobsListComponent={<JobsList jobs={Jobs} onClick={handleOnJobTagClick} />}
     />
   );

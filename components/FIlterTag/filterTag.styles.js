@@ -11,7 +11,7 @@ const _FilterTag = styled.div`
     font-weight: 700;
     padding: 0.65rem 0.75rem;
     padding-top: 0.75rem;
-    letter-spacing: 0.45px;
+    letter-spacing: 0.4px;
     border-bottom-left-radius: 4px;
     border-top-left-radius: 4px;
     background-color: ${({ theme }) => theme.colors.lightGrayBackground};
@@ -29,7 +29,6 @@ const _Remove = styled.img`
   background-color: ${({ theme }) => theme.colors.primary};
   transition: all 0.15s ease-in;
   cursor: pointer;
-
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkGray2};
   }

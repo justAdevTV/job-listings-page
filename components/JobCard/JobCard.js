@@ -30,7 +30,7 @@ function JobCard({
 
   return (
     <Card>
-      <_JobCardContainer>
+      <_JobCardContainer featured={featured}>
         {/* First Section */}
         <_Logo src={logo} alt={`logo for ${company}`} />
         {/* Middle Section */}

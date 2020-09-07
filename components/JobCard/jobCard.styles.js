@@ -1,8 +1,23 @@
 import styled from "styled-components";
 
 const _JobCardContainer = styled.div`
+  position: relative;
   display: flex;
   padding: 3.2rem 4rem;
+
+  ${({ featured, theme }) =>
+    featured &&
+    `&:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        border-bottom-left-radius: 0.5rem;
+        border-top-left-radius: 0.5rem;
+        width: .5rem;
+        top: 0;
+        left: 0;
+        background-color: ${theme.colors.primary};
+    }`}
 `;
 
 const _Logo = styled.img`

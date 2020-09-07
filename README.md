@@ -13,7 +13,7 @@
     <a href="https://www.frontendmentor.io/solutions/near-perfect-pixels-11-w-nextjs-and-styledcomponents-FYfg1bDZY"><strong>Check Out My Submission »</strong></a>
     <br />
     <br />
-    <a href="https://job-listings-page-4zzhgqxmw.vercel.app/">View Demo</a>
+    <a href="https://job-listings-page-mp9kl6594.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/justAdevTV/job-listings-page/issues">Report Bug</a>
     ·
@@ -36,7 +36,7 @@
 
 ## About The Project
 
-<img src="https://i.imgur.com/jpR3KA5.png" alt="Preview of Output">
+<img src="https://i.imgur.com/TwWIdJS.png" alt="Preview of Output">
 
 Hey everyone,
 

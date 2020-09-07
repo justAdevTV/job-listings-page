@@ -78,8 +78,8 @@ const _Tags = styled.div`
   margin: auto 0;
   margin-left: auto;
 
-  /* Round tags */
-  & > div:not(:last-child) {
+  /* Rectangle tags */
+  & > span:not(:last-child) {
     margin-right: 1.85rem;
   }
 `;

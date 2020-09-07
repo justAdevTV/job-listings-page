@@ -2,13 +2,14 @@ import PropTypes from "prop-types";
 import { _Clear, _FilterContainer, _Tags } from "./filter.styles";
 import { Card, FilterTag } from "../";
 
-// TODO: Fill this in
 function Filter({ filters, onChange }) {
   const handleOnRemoveFilterClick = ({ tagName }) => {
-    console.log("Remove Filter", tagName);
+    // Array with selected tag removed
+    const filteredArray = filters.filter((name) => name !== tagName);
+    onChange({ filters: filteredArray });
   };
 
-  const handleClearAllClick = () => onChange({ fitlers: [] });
+  const handleClearAllClick = () => onChange({ filters: [] });
 
   const generateTags = (filters) =>
     filters.map((filter) => (
@@ -17,8 +18,8 @@ function Filter({ filters, onChange }) {
       </FilterTag>
     ));
 
-  //   Don't render if no tags are selected
-  //   if (filters.length <= 0) return null;
+  // Don't render if no tags are selected
+  if (filters.length <= 0) return null;
 
   return (
     <Card>
@@ -26,7 +27,7 @@ function Filter({ filters, onChange }) {
         <_Tags>{generateTags(filters)}</_Tags>
         <_Clear
           ariaLabel="Clear All Filters"
-          onClick={() => handleClearAllClick}
+          onClick={() => handleClearAllClick()}
         >
           Clear
         </_Clear>

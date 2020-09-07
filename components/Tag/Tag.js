@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { _Tag } from "./tag.styles";
 
 function Tag({ children, round, dark, onClick }) {
@@ -15,6 +16,13 @@ function Tag({ children, round, dark, onClick }) {
 
 Tag.defaultProps = {
   onClick: () => {},
+};
+
+Tag.propTypes = {
+  children: PropTypes.string,
+  round: PropTypes.bool,
+  dark: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 export default Tag;

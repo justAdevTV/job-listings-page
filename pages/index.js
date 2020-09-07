@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { JobsPage as JobsPageTemplate } from "../templates";
 import { Banner, Filter, JobsList } from "../components";
 
@@ -157,16 +158,25 @@ const Jobs = [
 
 // Main Page
 function Home() {
-  // TODO: Add handler logic
+  // List of all filters
+  const [filters, setFilters] = useState([]);
+  // List of currect jobs based on filters
+  const jobs = useMemo(() => {}, [Jobs, filters]);
+
   const handleOnJobTagClick = ({ tagName }) => {
-    console.log("Job Tag Click", tagName);
+    if (!filters.includes(tagName)) setFilters([...filters, tagName]);
   };
+
+  // Called Wwhen a filter is removed
+  const handleOnFilterRemove = ({ filters }) => setFilters(filters);
 
   // TODO: Add filter for jobs
   return (
     <JobsPageTemplate
       bannerComponent={<Banner />}
-      filterComponent={<Filter filters={["Frontend", "CSS", "JavaScript"]} />}
+      filterComponent={
+        <Filter filters={filters} onChange={handleOnFilterRemove} />
+      }
       jobsListComponent={<JobsList jobs={Jobs} onClick={handleOnJobTagClick} />}
     />
   );

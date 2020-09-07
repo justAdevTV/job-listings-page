@@ -6,6 +6,7 @@ const _FilterContainer = styled.div`
 `;
 
 const _Clear = styled.a`
+  cursor: pointer;
   margin: auto 0;
   margin-left: auto;
   font-weight: 500;

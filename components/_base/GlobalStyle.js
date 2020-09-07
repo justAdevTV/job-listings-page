@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.6;
     min-height: 100vh;
     width: 100vw;
+    background-color: ${({ theme }) => theme.colors.background};
   }
 `;
 

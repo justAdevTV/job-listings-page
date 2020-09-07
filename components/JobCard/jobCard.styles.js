@@ -55,6 +55,8 @@ const _InfoContainer = styled.div`
     letter-spacing: 0.2px;
     cursor: pointer;
     transition: color 0.2s ease-in;
+    color: ${({ theme }) => theme.colors.darkGray2};
+
     &:hover {
       color: ${({ theme }) => theme.colors.primary};
     }

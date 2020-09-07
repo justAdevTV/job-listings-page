@@ -1,5 +1,6 @@
 const theme = {
   colors: {
+    background: "#EFFAFA",
     primary: "hsl(180, 29%, 50%)",
     lightGrayBackground: "hsl(180, 31%, 95%)",
     lightGrayTablet: "hsl(180, 31%, 95%)",

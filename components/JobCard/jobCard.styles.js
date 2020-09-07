@@ -18,11 +18,22 @@ const _JobCardContainer = styled.div`
         left: 0;
         background-color: ${theme.colors.primary};
     }`}
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    flex-direction: column;
+  }
 `;
 
 const _Logo = styled.img`
   display: block;
   border-radius: 50%;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    flex-direction: column;
+  }
 `;
 
 const _InfoContainer = styled.div`
@@ -67,6 +78,12 @@ const _InfoContainer = styled.div`
     font-weight: 500;
     color: ${({ theme }) => theme.colors.primary};
   }
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    margin-left: 0;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
 `;
 
 const _Spacer = styled.span`
@@ -83,6 +100,14 @@ const _Tags = styled.div`
   /* Rectangle tags */
   & > span:not(:last-child) {
     margin-right: 1.85rem;
+    @media ${({ theme }) => theme.devices.tablet} {
+      margin-top: 1.6rem;
+    }
+  }
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    margin-left: 0;
+    border-top: 1px solid ${({ theme }) => theme.colors.primary};
   }
 `;
 

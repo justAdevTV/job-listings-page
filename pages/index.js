@@ -14,7 +14,7 @@ const Jobs = [
     level: "Senior",
     postedAt: "1d ago",
     contract: "Full Time",
-    location: "USA Only",
+    location: "USA only",
     languages: ["HTML", "CSS", "JavaScript"],
     tools: [],
   },

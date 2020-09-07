@@ -12,7 +12,7 @@ const _HeaderSection = styled.header`
 `;
 
 const _JobsListSection = styled.section`
-  padding: 6.75rem 16.3rem;
+  padding: 6.75rem 16.5rem;
 `;
 
 const _FilterBox = styled.div`

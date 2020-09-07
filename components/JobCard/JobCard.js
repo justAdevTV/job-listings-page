@@ -1,7 +1,14 @@
 import PropTypes from "prop-types";
 import { Card, Tag } from "../";
-import { _Logo, _JobCardContainer } from "./jobCard.styles";
+import {
+  _InfoContainer,
+  _Logo,
+  _JobCardContainer,
+  _Tags,
+  _Spacer,
+} from "./jobCard.styles";
 
+// TODO: have data for right-hand tags already parsed
 function JobCard({
   company,
   logo,
@@ -12,14 +19,31 @@ function JobCard({
   level,
   postedAt,
   contract,
-  locaiton,
+  location,
   languages,
   tools,
 }) {
+  // TODO: Write logic for generate tags
+  const generateTags = () => {
+    return [];
+  };
+
   return (
     <Card>
       <_JobCardContainer>
         <_Logo src={logo} alt={`logo for ${company}`} />
+        <_InfoContainer>
+          <h2>{company}</h2>
+          <h3>{position}</h3>
+          <h4>
+            {postedAt}
+            <_Spacer>&#8226;</_Spacer>
+            {contract}
+            <_Spacer>&#8226;</_Spacer>
+            {location}
+          </h4>
+        </_InfoContainer>
+        <_Tags>{generateTags()}</_Tags>
       </_JobCardContainer>
     </Card>
   );

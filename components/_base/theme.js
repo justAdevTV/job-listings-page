@@ -5,6 +5,7 @@ const theme = {
     lightGrayTablet: "hsl(180, 31%, 95%)",
     darkGray1: "hsl(180, 8%, 52%)",
     darkGray2: "hsl(180, 14%, 20%)",
+    white: "#FFF",
   },
   shadows: {
     shadow1: "0px 15px 20px -5px rgba(13, 113, 130, 0.15)",

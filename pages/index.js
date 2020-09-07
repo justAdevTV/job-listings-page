@@ -1,11 +1,12 @@
 import { JobsPage as JobsPageTemplate } from "../templates";
-import { Banner } from "../components";
+import { Banner, Filter } from "../components";
 
+// Main Page
 function Home() {
   return (
     <JobsPageTemplate
       bannerComponent={<Banner />}
-      filterComponent={"hi"}
+      filterComponent={<Filter />}
       jobsListComponent={"hi"}
     />
   );

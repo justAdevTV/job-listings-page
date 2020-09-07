@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import {
+  _BannerContainer,
   _JobPageContainer,
   _HeaderSection,
   _JobsListSection,
@@ -9,8 +10,11 @@ import {
 function JobsPage({ bannerComponent, filterComponent, jobsListComponent }) {
   return (
     <_JobPageContainer>
-      <_HeaderSection>{bannerComponent}</_HeaderSection>
-      <_FilterBox>{filterComponent}</_FilterBox>
+      {/* Holds Banner & Filter */}
+      <_HeaderSection>
+        <_BannerContainer>{bannerComponent}</_BannerContainer>
+        <_FilterBox>{filterComponent}</_FilterBox>
+      </_HeaderSection>
       <_JobsListSection>{jobsListComponent}</_JobsListSection>
     </_JobPageContainer>
   );

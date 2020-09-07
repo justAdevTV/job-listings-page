@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { Card } from "../";
-import { _JobCardContainer } from "./jobCard.styles";
+import { Card, Tag } from "../";
+import { _Logo, _JobCardContainer } from "./jobCard.styles";
 
 function JobCard({
   company,
@@ -18,7 +18,9 @@ function JobCard({
 }) {
   return (
     <Card>
-      <_JobCardContainer>hi</_JobCardContainer>
+      <_JobCardContainer>
+        <_Logo src={logo} alt={`logo for ${company}`} />
+      </_JobCardContainer>
     </Card>
   );
 }

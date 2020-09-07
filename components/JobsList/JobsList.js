@@ -1,8 +1,20 @@
 import PropTypes from "prop-types";
 import { _JobsList } from "./jobsLists.styles";
+import { JobCard } from "../";
 
 function JobsList({ jobs, onClick }) {
-  return <_JobsList>JobsList</_JobsList>;
+  // Takes jobs prop and maps out to JobCards
+  const generateJobsListCards = (jobs) =>
+    jobs.map((jobProps) => (
+      <JobCard
+        {...jobProps}
+        key={jobProps.id}
+        isNew={jobProps.new}
+        onClick={onClick}
+      />
+    ));
+
+  return <_JobsList>{generateJobsListCards(jobs)}</_JobsList>;
 }
 
 JobsList.defaultProps = {

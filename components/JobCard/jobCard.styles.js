@@ -1,3 +1,7 @@
 import styled from "styled-components";
 
-export {};
+const _JobCardContainer = styled.div`
+  padding: 3.2rem 4rem;
+`;
+
+export { _JobCardContainer };

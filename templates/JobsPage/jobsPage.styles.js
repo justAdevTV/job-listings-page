@@ -18,7 +18,7 @@ const _JobsListSection = styled.section`
 const _FilterBox = styled.div`
   position: absolute;
   z-index: 999;
-  padding: 7.5rem 16.25rem;
+  padding: 7.5rem 16.5rem;
   top: 4.5rem;
 `;
 

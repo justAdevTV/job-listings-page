@@ -8,9 +8,13 @@ const _FilterContainer = styled.div`
 const _Clear = styled.a`
   margin: auto 0;
   margin-left: auto;
-  color: ${({ theme }) => theme.colors.primary};
-  font-weight: 700;
+  font-weight: 500;
   text-decoration: underline;
+  font-size: 0.85em;
+  transition: color 0.2s ease-in;
+  &:hover {
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;
 
 const _Tags = styled.div`

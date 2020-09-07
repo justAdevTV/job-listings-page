@@ -12,7 +12,7 @@ const findBackgroundColor = (round, colors, dark) => {
   }
 };
 
-const _Tag = styled.div`
+const _Tag = styled.span`
   display: inline-block;
   border-radius: ${({ round }) => (round ? "1.2rem" : "4px")};
   color: ${({ round, theme }) =>

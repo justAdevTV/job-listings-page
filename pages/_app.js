@@ -1,5 +1,5 @@
 import { AppProvider } from "../components";
-import theme from "../components/base/theme";
+import theme from "../components/_base/theme";
 
 function MyApp({ Component, pageProps }) {
   return (

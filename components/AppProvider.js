@@ -1,5 +1,5 @@
 import { ThemeProvider } from "styled-components";
-import GlobalStyle from "./base/GlobalStyle";
+import GlobalStyle from "./_base/GlobalStyle";
 import Head from "next/head";
 import PropTypes from "prop-types";
 

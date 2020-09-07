@@ -12,7 +12,16 @@ const _HeaderSection = styled.header`
 `;
 
 const _JobsListSection = styled.section`
+  transition: padding 0.2s ease-in-out;
   padding: 6.75rem 16.5rem;
+
+  @media ${({ theme }) => theme.devices.tablet} {
+    ${({ hasFilterActive }) =>
+      hasFilterActive &&
+      `
+        padding-top: 11rem;
+    `}
+  }
 `;
 
 const _FilterBox = styled.div`

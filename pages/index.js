@@ -195,8 +195,11 @@ function Home() {
   return (
     <JobsPageTemplate
       bannerComponent={<Banner />}
+      // Don't render if no tags are selected
       filterComponent={
-        <Filter filters={filters} onChange={handleOnFilterRemove} />
+        filters.length > 0 && (
+          <Filter filters={filters} onChange={handleOnFilterRemove} />
+        )
       }
       jobsListComponent={<JobsList jobs={jobs} onClick={handleOnJobTagClick} />}
     />

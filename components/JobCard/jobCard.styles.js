@@ -38,6 +38,11 @@ const _InfoContainer = styled.div`
     margin-left: 1px;
     margin-top: 0.85rem;
     letter-spacing: 0.2px;
+    cursor: pointer;
+    transition: color 0.2s ease-in;
+    &:hover {
+      color: ${({ theme }) => theme.colors.primary};
+    }
   }
 
   & > h4 {

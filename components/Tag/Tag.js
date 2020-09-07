@@ -7,6 +7,7 @@ function Tag({ children, round, dark, onClick }) {
       dark={dark}
       onClick={() => onClick({ tagName: children })}
     >
+      {/* TODO: Make <a> tag */}
       {children}
     </_Tag>
   );

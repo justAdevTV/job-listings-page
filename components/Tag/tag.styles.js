@@ -24,6 +24,18 @@ const _Tag = styled.div`
   letter-spacing: 0.45px;
   background-color: ${({ round, theme, dark }) =>
     findBackgroundColor(round, theme.colors, dark)};
+  cursor: ${({ round }) => (round ? "default" : "pointer")};
+  user-select: none;
+
+  ${({ theme, round }) =>
+    !round &&
+    `
+    transition: all .15s ease-in;
+    &:hover {
+      background-color: ${theme.colors.primary};
+      color: ${theme.colors.white};
+    }
+  `}
 `;
 
 export { _Tag };

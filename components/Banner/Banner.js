@@ -4,7 +4,7 @@ function Banner() {
   return (
     <_Banner
       src="/bg-header-desktop.svg"
-      srcset={`
+      srcSet={`
           /bg-header-mobile.svg   550w,
             /bg-header-desktop.svg 1500w
             `}

@@ -161,7 +161,28 @@ function Home() {
   // List of all filters
   const [filters, setFilters] = useState([]);
   // List of currect jobs based on filters
-  const jobs = useMemo(() => {}, [Jobs, filters]);
+  const jobs = useMemo(() => {
+    if (filters.length === 0) return Jobs;
+
+    return Jobs.filter((job) => {
+      // If filterMatchCount !== length of filters, don't push this item
+      let filterMatchCount = 0;
+      let filterableTags = [];
+      filterableTags.push(job.role);
+      filterableTags.push(job.level);
+      filterableTags = filterableTags.concat(job.languages);
+      filterableTags = filterableTags.concat(job.tools);
+
+      // Check against each filter
+      filters.forEach((filter) => {
+        if (filterableTags.includes(filter)) ++filterMatchCount;
+      });
+
+      const shouldShowJob = filterMatchCount === filters.length;
+
+      return shouldShowJob;
+    });
+  }, [Jobs, filters]);
 
   const handleOnJobTagClick = ({ tagName }) => {
     if (!filters.includes(tagName)) setFilters([...filters, tagName]);
@@ -177,7 +198,7 @@ function Home() {
       filterComponent={
         <Filter filters={filters} onChange={handleOnFilterRemove} />
       }
-      jobsListComponent={<JobsList jobs={Jobs} onClick={handleOnJobTagClick} />}
+      jobsListComponent={<JobsList jobs={jobs} onClick={handleOnJobTagClick} />}
     />
   );
 }

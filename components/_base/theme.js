@@ -6,6 +6,7 @@ const theme = {
     darkGray1: "hsl(180, 8%, 52%)",
     darkGray2: "hsl(180, 14%, 20%)",
     banner: "#5CA5A5",
+    black: "#2B3939",
     white: "#FFF",
   },
   shadows: {

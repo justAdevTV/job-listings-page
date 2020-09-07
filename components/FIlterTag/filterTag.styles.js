@@ -30,7 +30,7 @@ const _Remove = styled.img`
   transition: all 0.15s ease-in;
   cursor: pointer;
   &:hover {
-    background-color: ${({ theme }) => theme.colors.darkGray2};
+    background-color: ${({ theme }) => theme.colors.black};
   }
 `;
 

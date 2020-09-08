@@ -14,9 +14,10 @@ const theme = {
     shadow1: "0px 15px 20px -5px rgba(13, 113, 130, 0.15)",
   },
   devices: {
-    desktop: "(max-width: 1440px)",
-    tablet: "(max-width: 1300px)",
-    mobile: "(max-width: 375px)",
+    max: "(max-width: 1440px)",
+    large: "(max-width: 1300px)",
+    medium: "(max-width: 900px)",
+    small: "(max-width: 375px)",
   },
 };
 

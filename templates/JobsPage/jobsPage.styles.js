@@ -22,15 +22,28 @@ const _JobsListSection = styled.section`
         padding-top: 11rem;          
       }
     `}
+
+  @media ${({ theme }) => theme.devices.medium} {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
 `;
 
 const _FilterBox = styled.div`
   position: absolute;
+  /* Sum of left & right padding */
   width: calc(100% - 33rem);
   z-index: 999;
   padding: 7.5rem 16.5rem;
   bottom: 0.9rem;
   transform: translateY(50%);
+
+  @media ${({ theme }) => theme.devices.medium} {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    /* Sum of left & right padding */
+    width: calc(100% - 4.8rem);
+  }
 `;
 
 export {

@@ -25,9 +25,6 @@ const _JobCardContainer = styled.div`
 
   @media ${({ theme }) => theme.devices.small} {
     padding: 3.2rem 2.25rem;
-  }
-
-  @media ${({ theme }) => theme.devices.small} {
     padding-bottom: 2.2rem;
   }
 `;

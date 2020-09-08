@@ -5,6 +5,10 @@ const _FilterContainer = styled.div`
   align-items: baseline;
   padding: 2rem 4rem;
   padding-top: 0.4rem;
+  @media ${({ theme }) => theme.devices.small} {
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
 `;
 
 const _Clear = styled.a`

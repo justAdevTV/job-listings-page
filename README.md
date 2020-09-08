@@ -13,7 +13,7 @@
     <a href="https://www.frontendmentor.io/solutions/near-perfect-pixels-11-w-nextjs-and-styledcomponents-FYfg1bDZY"><strong>Check Out My Submission »</strong></a>
     <br />
     <br />
-    <a href="https://job-listings-page-5k7wjkdxn.vercel.app/">View Demo</a>
+    <a href="https://job-listings-page-kdivh2qs3.vercel.app/">View Demo</a>
     ·
     <a href="https://github.com/justAdevTV/job-listings-page/issues">Report Bug</a>
     ·

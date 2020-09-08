@@ -55,14 +55,14 @@ const _InfoContainer = styled.div`
     margin-top: 1px;
     font-size: 0.95em;
     line-height: 1.6em;
-    font-weight: 500;
+    font-weight: 700;
     color: ${({ theme }) => theme.colors.primary};
 
     & > span {
       position: absolute;
       top: -1px;
       display: inline-block;
-      margin-left: 1.6rem;
+      margin-left: 1.55rem;
 
       /* Round tags */
       & > span:first-child {
@@ -75,7 +75,6 @@ const _InfoContainer = styled.div`
 
     @media ${({ theme }) => theme.devices.smallest} {
       font-size: 0.89em;
-      font-weight: 700;
       letter-spacing: 0.05px;
     }
   }

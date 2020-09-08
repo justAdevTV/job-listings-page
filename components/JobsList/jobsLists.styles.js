@@ -6,6 +6,10 @@ const _JobsList = styled.div`
     @media ${({ theme }) => theme.devices.large} {
       margin-top: 8rem;
     }
+
+    @media ${({ theme }) => theme.devices.smallest} {
+      margin-top: 3.9rem;
+    }
   }
 `;
 

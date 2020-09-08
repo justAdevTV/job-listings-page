@@ -27,6 +27,10 @@ const _JobsListSection = styled.section`
     padding-left: 2.4rem;
     padding-right: 2.4rem;
   }
+
+  @media ${({ theme }) => theme.devices.small} {
+    padding-top: 4.7rem;
+  }
 `;
 
 const _FilterBox = styled.div`

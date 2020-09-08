@@ -15,13 +15,13 @@ const _JobsListSection = styled.section`
   transition: padding 0.2s ease-in-out;
   padding: 6.75rem 16.5rem;
 
-  @media ${({ theme }) => theme.devices.tablet} {
-    ${({ hasFilterActive }) =>
-      hasFilterActive &&
-      `
-        padding-top: 11rem;
+  ${({ hasFilterActive, theme }) =>
+    hasFilterActive &&
+    `
+      @media ${theme.devices.large} {
+        padding-top: 11rem;          
+      }
     `}
-  }
 `;
 
 const _FilterBox = styled.div`
@@ -29,7 +29,8 @@ const _FilterBox = styled.div`
   width: calc(100% - 33rem);
   z-index: 999;
   padding: 7.5rem 16.5rem;
-  top: 4.5rem;
+  bottom: 0.9rem;
+  transform: translateY(50%);
 `;
 
 export {

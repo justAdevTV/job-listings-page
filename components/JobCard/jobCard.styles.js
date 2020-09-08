@@ -19,7 +19,7 @@ const _JobCardContainer = styled.div`
         background-color: ${theme.colors.primary};
     }`}
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.large} {
     flex-direction: column;
   }
 `;
@@ -28,7 +28,7 @@ const _Logo = styled.img`
   display: block;
   border-radius: 50%;
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.large} {
     position: absolute;
     top: 0;
     transform: translateY(-50%);
@@ -79,7 +79,7 @@ const _InfoContainer = styled.div`
     color: ${({ theme }) => theme.colors.primary};
   }
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.large} {
     margin-left: 0;
     margin-top: 2.5rem;
     margin-bottom: 2rem;
@@ -100,12 +100,12 @@ const _Tags = styled.div`
   /* Rectangle tags */
   & > span:not(:last-child) {
     margin-right: 1.85rem;
-    @media ${({ theme }) => theme.devices.tablet} {
+    @media ${({ theme }) => theme.devices.large} {
       margin-top: 1.6rem;
     }
   }
 
-  @media ${({ theme }) => theme.devices.tablet} {
+  @media ${({ theme }) => theme.devices.large} {
     margin-left: 0;
     border-top: 1px solid ${({ theme }) => theme.colors.primary};
   }

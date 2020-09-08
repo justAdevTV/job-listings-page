@@ -18,9 +18,6 @@ function Filter({ filters, onChange }) {
       </FilterTag>
     ));
 
-  // Don't render if no tags are selected
-  if (filters.length <= 0) return null;
-
   return (
     <Card>
       <_FilterContainer>

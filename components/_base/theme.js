@@ -1,5 +1,6 @@
 const theme = {
   colors: {
+    background: "#EFFAFA",
     primary: "hsl(180, 29%, 50%)",
     lightGrayBackground: "hsl(180, 31%, 95%)",
     lightGrayTablet: "hsl(180, 31%, 95%)",
@@ -13,8 +14,11 @@ const theme = {
     shadow1: "0px 15px 20px -5px rgba(13, 113, 130, 0.15)",
   },
   devices: {
-    desktop: "1440px",
-    mobile: "375px",
+    max: "(max-width: 1440px)",
+    large: "(max-width: 1300px)",
+    medium: "(max-width: 900px)",
+    small: "(max-width: 510px)",
+    smallest: "(max-width: 375px)",
   },
 };
 

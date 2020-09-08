@@ -12,15 +12,49 @@ const _HeaderSection = styled.header`
 `;
 
 const _JobsListSection = styled.section`
+  transition: padding 0.2s ease-in-out;
   padding: 6.75rem 16.5rem;
+
+  @media ${({ theme }) => theme.devices.medium} {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+
+  @media ${({ theme }) => theme.devices.small} {
+    padding-top: 4.7rem;
+  }
+
+  ${({ hasFilterActive, theme }) =>
+    hasFilterActive &&
+    `
+    @media ${theme.devices.large} {
+      padding-top: 9.5rem;          
+    }
+    @media ${theme.devices.medium} {
+      padding-top: 11.25rem;          
+    }
+    @media ${theme.devices.small} {
+      padding-top: 11.75rem;
+    }
+    `}
 `;
 
 const _FilterBox = styled.div`
   position: absolute;
+  transition: all 0.2s ease-in-out;
+  /* Sum of left & right padding */
   width: calc(100% - 33rem);
   z-index: 999;
   padding: 7.5rem 16.5rem;
-  top: 4.5rem;
+  bottom: 0.9rem;
+  transform: translateY(50%);
+
+  @media ${({ theme }) => theme.devices.medium} {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    /* Sum of left & right padding */
+    width: calc(100% - 4.8rem);
+  }
 `;
 
 export {

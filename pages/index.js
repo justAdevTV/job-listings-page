@@ -1,6 +1,10 @@
+import dynamic from "next/dynamic";
 import { useMemo, useState } from "react";
 import { JobsPage as JobsPageTemplate } from "../templates";
-import { Banner, Filter, JobsList } from "../components";
+import { Filter, JobsList } from "../components";
+
+// Uses window
+const Banner = dynamic(() => import("../components/Banner"), { ssr: false });
 
 // TODO: Add fetch
 const Jobs = [
@@ -195,8 +199,11 @@ function Home() {
   return (
     <JobsPageTemplate
       bannerComponent={<Banner />}
+      // Don't render if no tags are selected
       filterComponent={
-        <Filter filters={filters} onChange={handleOnFilterRemove} />
+        filters.length > 0 && (
+          <Filter filters={filters} onChange={handleOnFilterRemove} />
+        )
       }
       jobsListComponent={<JobsList jobs={jobs} onClick={handleOnJobTagClick} />}
     />

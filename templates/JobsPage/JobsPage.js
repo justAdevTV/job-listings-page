@@ -15,7 +15,9 @@ function JobsPage({ bannerComponent, filterComponent, jobsListComponent }) {
         <_BannerContainer>{bannerComponent}</_BannerContainer>
         <_FilterBox>{filterComponent}</_FilterBox>
       </_HeaderSection>
-      <_JobsListSection>{jobsListComponent}</_JobsListSection>
+      <_JobsListSection hasFilterActive={!!filterComponent}>
+        {jobsListComponent}
+      </_JobsListSection>
     </_JobPageContainer>
   );
 }

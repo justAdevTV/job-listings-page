@@ -31,6 +31,7 @@ const _JobsListSection = styled.section`
 
 const _FilterBox = styled.div`
   position: absolute;
+  transition: all 0.2s ease-in-out;
   /* Sum of left & right padding */
   width: calc(100% - 33rem);
   z-index: 999;
